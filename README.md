@@ -1,8 +1,10 @@
 # antiadblocker
 Detects AdBlockers and Blocks them
 
-This project is made with the help of FuckAdBlock Repo. 
+This project is made with the help of FuckAdBlock Repo.
+
 https://fuckadblock.sitexw.fr/
+
 https://github.com/sitexw/FuckAdBlock
 
 I have added some UI so that website owners can use this script more conveniently to get more earnings from there traffic. Its a simple script to detect AdBlockers like AdBlock, AdBlockPlus. 
