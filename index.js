@@ -3,28 +3,28 @@ $('pre code').each(function(i, block) {
 });
 
 
-		function adBlockDetected() {
+function adBlockDetected() {
 			
-            var user=getCookie("username");
-                    
-            if (user === "John Doe") {
+    var user=getCookie("username");           
+       if (user === "John Doe") {
                 
-                document.getElementById('adblockdetected').style.display = 'none';
-                setTimeout(function() {
-  			        document.getElementById('hello').innerHTML = 'You have purchased premium plan.';
-                }, 1000);
+           document.getElementById('adblockdetected').style.display = 'none';
+	       
+           setTimeout(function() {
+  		document.getElementById('hello').innerHTML = 'You have purchased premium plan.';
+           }, 1000);
                 
-                document.getElementById('AdS1').style.display = 'none';
-            }
+           document.getElementById('AdS1').style.display = 'none';
+       }
                   
-            else {
-                  document.getElementById('adblockdetected').style.display = 'block';
-            }
+       else {
+           document.getElementById('adblockdetected').style.display = 'block';
+       }
                     
                 
                 
-            function getCookie(cname) {
-                var name = cname + "=";
+       function getCookie(cname) {
+          	var name = cname + "=";
                 var decodedCookie = decodeURIComponent(document.cookie);
                 var ca = decodedCookie.split(';');
                 for(var i = 0; i < ca.length; i++) {
@@ -37,27 +37,28 @@ $('pre code').each(function(i, block) {
                     }
                 }
                 return "";
-            }
+        }
 			
-		}
+}
 		
 		
 		
-		function adBlockNotDetected() {
-			document.getElementById('adblockdetected').style.display = 'none';
+function adBlockNotDetected() {
+	document.getElementById('adblockdetected').style.display = 'none';
 			
-			setTimeout(function() {
-  			document.getElementById('hello').innerHTML = 'Ad Blocker Not Found !';
-            }, 1000);
+	setTimeout(function() {
+  		document.getElementById('hello').innerHTML = 'Ad Blocker Not Found !';
+        }, 1000);
 
-		}
+}
 		
-		if(typeof fuckAdBlock === 'undefined') {
-			adBlockDetected();
-		} else {
-			fuckAdBlock.setOption({ debug: true });
-			fuckAdBlock.onDetected(adBlockDetected).onNotDetected(adBlockNotDetected);
-		}
+
+if(typeof fuckAdBlock === 'undefined') {
+	adBlockDetected();
+} else {
+	fuckAdBlock.setOption({ debug: true });
+	fuckAdBlock.onDetected(adBlockDetected).onNotDetected(adBlockNotDetected);
+}
 		
 
 
